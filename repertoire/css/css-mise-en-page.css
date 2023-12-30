@@ -1,0 +1,375 @@
+/**
+    Déclaration global a toute l'application
+    Cette partie est modifié SEULEMENT APRES avoir communiquer avec les autre membre de l'équipe.
+    --------------------------------------------------------------------------------------------
+**/
+
+/** Chargement des polices **/
+@font-face {
+    font-family: myfont;
+    src: url(../Font/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+* {
+    font-family: myfont;
+}
+
+/** Déclaration du box-sizing **/
+* {
+    box-sizing: border-box;
+}
+
+/** Sémantique permettant un aspect constant sur toute l'application **/
+nav {
+    box-shadow: 2px 2px 2px 2px black;
+    background-color: #7489af;
+}
+
+nav * {
+    width: 150px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+nav div img {
+    background-color: white;
+    width: 100%;
+
+}
+
+
+nav a {
+    color: black;
+    padding-top: 20px;
+}
+
+nav a:hover {
+    background-color: hsl(219, 27%, 77%);
+    color: yellow;
+}
+
+footer {
+    position: relative;
+    background-color: #7489af;
+    top: 170px;
+}
+
+footer div iframe {
+    position: relative;
+    padding-left: 150px;
+    height: 100px;
+    width: 300px;
+}
+
+footer div {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: 140px;
+    width: 140px;
+    padding: 30px;
+}
+
+footer div a img {
+    border-radius: 50%;
+    width: 50%;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+
+/**
+    Déclaration spécifique a chaque page au besoin.
+    Chaque personne travaille sur une page à la fois donc il ne devrait jamais y avoir de conflit.
+
+**/
+
+.home main, .catalogue main, .galerie main, .detailProduit main {
+    position: relative;
+}
+
+
+
+/*css galerie
+---------------------------------------------*/
+.galerie main>div {
+    border: 1px solid black;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+
+}
+
+.galerie div div {
+    position: relative;
+    display: inline-block;
+}
+
+.galerie main div div a+a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px 10px;
+    display: none;
+    border: 2px solid black;
+    background-color: #7489af;
+    width: 100px;
+}
+
+.galerie main div div a img {
+    height: 300px;
+    width: 100%;
+}
+
+.galerie main div div:hover {
+    border: 2px solid black;
+}
+
+.galerie main div div:hover a+a {
+    display: block;
+}
+
+/*----------------------------------------*/
+
+/*css commun a home et catalogue
+-------------------------------------------*/
+.home aside, .catalogue aside {
+    position: absolute;
+    background-color: #7489af;
+    top: 120px;
+    width: 20%;
+    height: 350px;
+    margin-right: 10px;
+
+}
+
+aside a:hover {
+    background-color: hsl(219, 27%, 77%);
+}
+
+.home main aside a, .catalogue main aside a {
+    color: black;
+    width: 100%;
+    height: 117px;
+    padding-top: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+.home main aside+div, .catalogue main aside+div {
+    position: relative;
+    top: 40px;
+    height: 350px;
+    left: 25%;
+    width: 75%;
+    overflow: auto;
+}
+
+
+/*-------------------------------------------*/
+
+
+/*css home
+-------------------------------------------*/
+.home main div {
+    text-align: center;
+}
+
+.home main div h1 {
+    font-size: 22px;
+}
+
+.home main aside+div div {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+.home main aside+div div img {
+    width: 100%;
+    height: 100%;
+}
+
+div#center {
+    margin: 100px 100px;
+    width: 80%;
+    text-align: center;
+}
+
+/*-------------------------------------------*/
+
+/*css tableau
+-------------------------------------------*/
+.tableau main div>table {
+    width: 80%;
+    margin: auto;
+}
+
+.tableau main caption {
+    margin: 5px;
+}
+
+
+.tableau main img {
+    height: 100px;
+    width: 100px;
+}
+
+.tableau main div table, th, td {
+    border: 3px solid green;
+}
+
+.tableau main div table th {
+    background-color: lightgray;
+}
+
+
+.tableau main div table tr {
+    background-color: rgb(117, 117, 239);
+}
+
+.tableau main div table tr+tr {
+    background-color: rgb(61, 220, 61);
+}
+
+.tableau main div table tr+tr+tr {
+    background-color: rgb(117, 117, 239);
+}
+
+.tableau main div table tr+tr+tr+tr {
+    background-color: rgb(61, 220, 61);
+}
+
+
+
+.tableau footer {
+    position: relative;
+    background-color: #7489af;
+    top: 0px;
+}
+
+/*-------------------------------------------*/
+
+
+
+/*css contact
+-------------------------------------------*/
+.contact h1 {
+    margin-left: 50px;
+}
+
+form {
+    width: 90%;
+    margin-left: 50px;
+}
+
+form div {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+div.personalInfo {
+    display: inline-block;
+    width: 45%;
+    height: 45px;
+}
+
+div.personalInfo input {
+    width: 100%;
+    height: 100%;
+}
+
+.contact footer {
+    top: 0;
+}
+
+.contact div:last-of-type {
+    text-align: center;
+}
+
+/*-------------------------------------------*/
+
+
+/*css catalogue
+-------------------------------------------*/
+
+.catalogue aside+div div {
+    display: inline-block;
+    width: 200px;
+}
+
+.catalogue aside+div div img {
+    width: 100%;
+    height: 70%;
+}
+
+/*-------------------------------------------*/
+
+/*css detailProduit
+-------------------------------------------*/
+.detailProduit main {
+    height: 800px;
+}
+
+.detailedImage {
+    margin: 20px 15px;
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*.detailProduit main div*/
+.infoProduct {
+    margin: 20px 15px;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 800px;
+}
+
+.infoProduct>div {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.infoProduct>div p {
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.infoProduct .miniImage {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.infoProduct .miniImage img {
+    width: 100%;
+}
+
+
+.detailProduit main div a {
+    height: 600px;
+}
+
+.detailProduit main div img {
+    width: 100%;
+    height: 100%;
+}
+
+.detailProduit footer {
+    top: 0;
+}
+
+/*-------------------------------------------*/
